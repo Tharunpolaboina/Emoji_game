@@ -14,9 +14,9 @@ class EmojiGame extends Component {
     timer: 60,
   }
 
-  componentDidMount() {
-    this.timerId = setInterval(this.statusChange, 2000)
-  }
+componentDidMount(){
+  this.timerId = setInterval(this.statusChange, 2000)
+}
 
   statusChange = () => {
     const {timer} = this.state
@@ -31,8 +31,8 @@ class EmojiGame extends Component {
  
 
   resetGame = () => {
-    clearInterval(this.timerId)
     this.setState({clickedEmojisList: [], isGameInProgress: true, timer: 60})
+    this.timerId = setInterval(this.statusChange, 2000)
   }
 
   renderScoreCard = () => {
