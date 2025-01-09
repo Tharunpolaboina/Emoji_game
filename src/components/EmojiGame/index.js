@@ -102,7 +102,6 @@ class EmojiGame extends Component {
 
   render() {
     const {clickedEmojisList, isGameInProgress, topScore, timer} = this.state
-console.log(timer)
     return (
       <div className="app-container">
         <NavBar
